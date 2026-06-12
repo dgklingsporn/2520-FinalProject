@@ -16,7 +16,7 @@ IMAGE_PATH = 'YOUR_IMAGE_HERE.png';    % <── change this
 
 % ─────────────────────────────────────────────────────────
 img = imread(IMAGE_PATH);
-
+ 
 if ndims(img) == 3
     img = rgb2gray(img);
 end
