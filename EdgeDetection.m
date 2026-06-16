@@ -27,7 +27,7 @@ img = im2double(img);
 %% ── Sobel edge detection functions ───────────────────────
 
 function [gx, gy] = sobel_kernels()
-    % Returns the horizontal (gx) and vertical (gy) 3×3 Sobel kernels.
+    % Returns the horizontal (gx) and vertical (gy) 3x3 Sobel kernels.
     gx = [-1 0 1; -2 0 2; -1 0 1];
     gy = [-1 -2 -1; 0 0 0; 1 2 1];
 end
@@ -47,8 +47,8 @@ end
 %% ── Laplacian edge detection functions ───────────────────
 
 function kernel = laplacian_kernel(diagonal)
-    % Returns a 3×3 Laplacian (second-derivative) kernel.
-    % diagonal = false → 4-neighbour; true → 8-neighbour (includes corners).
+    % Returns a 3x3 Laplacian (second-derivative) kernel.
+    % diagonal = false -> 4-neighbour; true -> 8-neighbour (includes corners).
     if diagonal
         kernel = [1 1 1; 1 -8 1; 1 1 1];
     else
